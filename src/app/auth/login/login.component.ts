@@ -40,11 +40,6 @@ export class LoginComponent {
       next: (res: LoginResponse) => {
         if (res) {
           this.loginForm.reset();
-          const user = {
-            id: res.id,
-            user: res.name,
-            email: res.email,
-          };
           this.router.navigateByUrl('/home');
         } else {
           alert('Credenciales incorrectas');

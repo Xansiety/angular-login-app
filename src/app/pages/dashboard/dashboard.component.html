@@ -5,4 +5,9 @@
     <p *ngIf="!userLoginOn" class="fs-2">Usuario NO Autenticado</p>
     <p *ngIf="userLoginOn" class="fs-2">Usuario Autenticado</p>
   </div>
+  <div class="row">
+      <code>
+        {{ user | json }}
+      </code>
+  </div>
 </div>
