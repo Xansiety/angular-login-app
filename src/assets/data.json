@@ -1,0 +1,7 @@
+{
+  "message": "Authentication Passed",
+  "id": 1,
+  "name": "John",
+  "lastName": "Doe",
+  "email": "jhon.doe@test.com"
+}

@@ -1,1 +1,57 @@
-<p>login works!</p>
+<div class="container-xl">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center">Login</h1>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h4 *ngIf="loginError" class="mb-2">
+          <p class="text-danger">{{ loginError }}</p>
+        </h4>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            formControlName="email"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+
+          <div
+            *ngIf="
+              emailControl.invalid &&
+              (emailControl.dirty || emailControl.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="emailControl.errors?.['required']">
+              Email is required.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            formControlName="password"
+          />
+          <div
+            *ngIf="
+              passwordControl.invalid &&
+              (passwordControl.dirty || passwordControl.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="passwordControl.errors?.['required']">
+              Password is required.
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
