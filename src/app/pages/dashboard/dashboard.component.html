@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="row text-center">
+    <p *ngIf="!userLoginOn" class="fs-2">Usuario NO Autenticado</p>
+    <p *ngIf="userLoginOn" class="fs-2">Usuario Autenticado</p>
+  </div>
+</div>
